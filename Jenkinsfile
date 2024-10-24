@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/Jonathan-Jo-me/Jonathan-Jo-me-eks-terraform.git'
+                echo "Checking out the terraform code"
+                checkout scm  // Checks out the code from the configured repository in Jenkins
             }
         }
 
