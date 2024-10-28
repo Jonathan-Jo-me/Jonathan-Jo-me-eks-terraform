@@ -7,6 +7,7 @@ module "eks" {
   subnet_ids      = module.vpc.private_subnets
 
   enable_irsa = true
+  cluster_endpoint_public_access  = true
 
   tags = {
     cluster = "my-cluster"
@@ -27,6 +28,7 @@ module "eks" {
       desired_size = 2
     }
   }
+  enable_cluster_creator_admin_permissions = true
 }
 /*
 # Use the root account as the principal
