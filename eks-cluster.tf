@@ -23,9 +23,9 @@ module "eks" {
 
   eks_managed_node_groups = {
     "node_group" = {
-      min_size     = 2
-      max_size     = 3
-      desired_size = 2
+      min_size     = 1
+      max_size     = 2
+      desired_size = 1
     }
   }
   enable_cluster_creator_admin_permissions = true
