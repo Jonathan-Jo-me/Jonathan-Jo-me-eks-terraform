@@ -18,7 +18,7 @@ pipeline {
             steps {
                 withCredentials([aws(credentialsId: 'aws-credentials', region: AWS_REGION)]) {
                     // Initialize Terraform with the AWS credentials
-                    sh 'terraform init -backend-config="bucket=terraform-statefile-s3bucket-eks" -backend-config="key=backend/TFSTATE-FILE.tfstate" -backend-config="region=ap-south-1" -backend-config="dynamodb_table=Dynamodb-terraform"'
+                    sh 'terraform init'
                 }
             }
         }
